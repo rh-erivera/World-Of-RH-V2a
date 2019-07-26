@@ -4,6 +4,7 @@
       <h1>RH PORTAL CONCEPTS</h1>
       <a href="/design10">Design 10</a>
       <a href="/design11">Design 11</a>
+      <a href="/design12">Design 12</a>
     </div>
   </div>
 </template>
