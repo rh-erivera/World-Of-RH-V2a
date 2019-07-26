@@ -1,0 +1,20 @@
+{
+  "name": "world-of-RH-v2a",
+  "version": "1.0.0",
+  "description": "RH Portal Concepts Round 2",
+  "author": "rh-erivera",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "scrollreveal": "^4.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
