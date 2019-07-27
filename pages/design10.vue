@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <img class="logo" src="/theWorldOfRH-Logo-White.svg" alt="">
-        <div class="col-1-container">
-            <div id="products" ref="products" class="col-1" @mouseenter="showProducts" @mouseleave="reset"></div>
+        <div class="col-1-container" @mouseenter="showProducts" @mouseleave="reset">
+            <div id="products" ref="products" class="col-1"></div>
             <p class="titles col-1-title">PRODUCTS</p>
             <div id="col1Menu" ref="col1Menu" class="menu">
                 <a href="">COLLECTIONS<span style="padding: 0 10px;">|</span></a>
@@ -10,8 +10,8 @@
                 <a href="">GALLERIES</a>
             </div>
         </div>
-        <div class="col-2-container">
-            <div id="places" ref="places" class="col-2" @mouseenter="showPlaces" @mouseleave="reset"></div>
+        <div class="col-2-container" @mouseenter="showPlaces" @mouseleave="reset">
+            <div id="places" ref="places" class="col-2"></div>
             <p class="titles col-2-title">PLACES</p>
             <div id="col2Menu" ref="col2Menu" class="menu">
                 <a href="">GALLERIES<span style="padding: 0 10px;">|</span></a>
@@ -19,8 +19,8 @@
                 <a href="">RESIDENCES</a>
             </div>
         </div>
-        <div class="col-3-container">
-            <div id="spaces" ref="spaces" class="col-3" @mouseenter="showSpaces" @mouseleave="reset"></div>
+        <div class="col-3-container" @mouseenter="showSpaces" @mouseleave="reset">
+            <div id="spaces" ref="spaces" class="col-3"></div>
             <p class="titles col-3-title">SPACES</p>
             <div id="col3Menu" ref="col3Menu" class="menu">
                 <a href="">GUEST HOUSES<span style="padding: 0 10px;">|</span></a>

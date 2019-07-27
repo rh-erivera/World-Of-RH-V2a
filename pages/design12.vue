@@ -11,40 +11,40 @@
             </video>
         </div> 
         <div class="grid">
-            <div class="bg-container" @mouseenter="reveal1" @mouseleave="hide1">
-                <div id="bg1" ref="bg1" class="bg bg-1"></div>
+            <div class="bg-container">
+                <div id="bg1" ref="bg1" class="bg bg-1" @mouseenter="reveal1" @mouseleave="hide1"></div>
                 <p id="bg1Title" ref="bg1Title">COLLECTIONS</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal2" @mouseleave="hide2">
-                <div id="bg2" ref="bg2" class="bg bg-2"></div>
+            <div class="bg-container">
+                <div id="bg2" ref="bg2" class="bg bg-2" @mouseenter="reveal2" @mouseleave="hide2"></div>
                 <p id="bg2Title" ref="bg2Title">SOURCE BOOKS</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal3" @mouseleave="hide3">
-                <div id="bg3" ref="bg3" class="bg bg-3"></div>
+            <div class="bg-container">
+                <div id="bg3" ref="bg3" class="bg bg-3" @mouseenter="reveal3" @mouseleave="hide3"></div>
                 <p id="bg3Title" ref="bg3Title">GALLERIES</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal4" @mouseleave="hide4">
-                <div id="bg4" ref="bg4" class="bg bg-4"></div>
+            <div class="bg-container">
+                <div id="bg4" ref="bg4" class="bg bg-4" @mouseenter="reveal4" @mouseleave="hide4"></div>
                 <p id="bg4Title" ref="bg4Title">RESIDENCES</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal5" @mouseleave="hide5">
-                <div id="bg5" ref="bg5" class="bg bg-5"></div>
+            <div class="bg-container">
+                <div id="bg5" ref="bg5" class="bg bg-5" @mouseenter="reveal5" @mouseleave="hide5"></div>
                 <p id="bg5Title" ref="bg5Title">GUEST HOUSES</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal6" @mouseleave="hide6">
-                <div id="bg6" ref="bg6" class="bg bg-6"></div>
+            <div class="bg-container">
+                <div id="bg6" ref="bg6" class="bg bg-6" @mouseenter="reveal6" @mouseleave="hide6"></div>
                 <p id="bg6Title" ref="bg6Title">RESTAURANTS</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal7" @mouseleave="hide7">
-                <div id="bg7" ref="bg7" class="bg bg-8"></div>
+            <div class="bg-container">
+                <div id="bg7" ref="bg7" class="bg bg-8" @mouseenter="reveal7" @mouseleave="hide7"></div>
                 <p id="bg7Title" ref="bg7Title">PLANES</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal8" @mouseleave="hide8">
-                <div id="bg8" ref="bg8" class="bg bg-7"></div>
+            <div class="bg-container">
+                <div id="bg8" ref="bg8" class="bg bg-7" @mouseenter="reveal8" @mouseleave="hide8"></div>
                 <p id="bg8Title" ref="bg8Title">YATCHS</p>
             </div>
-            <div class="bg-container" @mouseenter="reveal9" @mouseleave="hide9">
-                <div id="bg9" ref="bg9" class="bg bg-9"></div>
+            <div class="bg-container">
+                <div id="bg9" ref="bg9" class="bg bg-9" @mouseenter="reveal9" @mouseleave="hide9"></div>
                 <p id="bg9Title" ref="bg9Title">DESIGN SERVICES</p>
             </div>
         </div>
