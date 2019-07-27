@@ -5,6 +5,8 @@
       <a href="/design10">Design 10</a>
       <a href="/design11">Design 11</a>
       <a href="/design12">Design 12</a>
+      <a href="/design13">Design 13</a>
+      <a href="/design14">Design 14</a>
     </div>
   </div>
 </template>
