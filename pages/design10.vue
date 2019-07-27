@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <img class="logo" src="/theWorldOfRH-Logo-White.svg" alt="">
-        <div class="col-1-container" @mouseenter="showProducts" @mouseleave="reset">
+        <v-touch v-on:tap="reset"><img class="logo" src="/theWorldOfRH-Logo-White.svg" alt=""></v-touch>
+        <v-touch v-on:tap="showProducts" class="col-1-container">
             <div id="products" ref="products" class="col-1"></div>
             <p class="titles col-1-title">PRODUCTS</p>
             <div id="col1Menu" ref="col1Menu" class="menu">
@@ -9,8 +9,8 @@
                 <a href="">SOURCE BOOKS<span style="padding: 0 10px;">|</span></a>
                 <a href="">GALLERIES</a>
             </div>
-        </div>
-        <div class="col-2-container" @mouseenter="showPlaces" @mouseleave="reset">
+        </v-touch>
+        <v-touch v-on:tap="showPlaces" class="col-2-container">
             <div id="places" ref="places" class="col-2"></div>
             <p class="titles col-2-title">PLACES</p>
             <div id="col2Menu" ref="col2Menu" class="menu">
@@ -18,8 +18,8 @@
                 <a href="">RESTAURANTS<span style="padding: 0 10px;">|</span></a>
                 <a href="">RESIDENCES</a>
             </div>
-        </div>
-        <div class="col-3-container" @mouseenter="showSpaces" @mouseleave="reset">
+        </v-touch>
+        <v-touch v-on:tap="showSpaces" class="col-3-container">
             <div id="spaces" ref="spaces" class="col-3"></div>
             <p class="titles col-3-title">SPACES</p>
             <div id="col3Menu" ref="col3Menu" class="menu">
@@ -27,7 +27,7 @@
                 <a href="">PLANES<span style="padding: 0 10px;">|</span></a>
                 <a href="">YATCHS</a>
             </div>
-        </div>
+        </v-touch>
     </div>
 </template>
 
@@ -40,6 +40,10 @@ export default {
             this.$refs.spaces.style.width = '20vw'
             this.$refs.products.style.opacity = 1
             this.$refs.col1Menu.style.opacity = 1
+            this.$refs.places.style.opacity = .4
+            this.$refs.spaces.style.opacity = .4
+            this.$refs.col2Menu.style.opacity = 0
+            this.$refs.col3Menu.style.opacity = 0
         },
         showPlaces() {
             this.$refs.products.style.width = '20vw'
@@ -47,6 +51,10 @@ export default {
             this.$refs.spaces.style.width = '20vw'
             this.$refs.places.style.opacity = 1
             this.$refs.col2Menu.style.opacity = 1
+            this.$refs.products.style.opacity = .4
+            this.$refs.spaces.style.opacity = .4
+            this.$refs.col1Menu.style.opacity = 0
+            this.$refs.col3Menu.style.opacity = 0
         },
         showSpaces() {
             this.$refs.products.style.width = '20vw'
@@ -54,6 +62,10 @@ export default {
             this.$refs.spaces.style.width = '60vw'
             this.$refs.spaces.style.opacity = 1
             this.$refs.col3Menu.style.opacity = 1
+            this.$refs.products.style.opacity = .4
+            this.$refs.places.style.opacity = .4
+            this.$refs.col1Menu.style.opacity = 0
+            this.$refs.col2Menu.style.opacity = 0
         },
         reset() {
             this.$refs.products.style.width = '33.33vw'
