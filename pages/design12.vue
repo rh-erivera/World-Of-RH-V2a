@@ -11,14 +11,18 @@
             </video>
         </div> 
         <div class="grid">
-            <v-touch v-on:tap="reveal1" class="bg-container">
+            <v-touch v-for="(item, i) in gridItems" :key="i" v-on:tap="reveal(i+1)" class="bg-container">
+                <div :id="'bg'+(i+1)" :ref="'bg'+(i+1)" :class="'bg bg-'+(i+1)"></div>
+                <p :id="'bg'+(i+1)+'Title'" :ref="'bg'+(i+1)+'Title'">{{item}}</p>
+            </v-touch>
+            <!-- <v-touch v-on:tap="reveal(1)" class="bg-container">
                 <div id="bg1" ref="bg1" class="bg bg-1"></div>
                 <p id="bg1Title" ref="bg1Title">COLLECTIONS</p>
-            </v-touch>
-            <div class="bg-container">
-                <div id="bg2" ref="bg2" class="bg bg-2" @mouseenter="reveal2" @mouseleave="hide2"></div>
+            </v-touch> -->
+            <!-- <v-touch v-on:tap="reveal(2)" class="bg-container">
+                <div id="bg2" ref="bg2" class="bg bg-2"></div>
                 <p id="bg2Title" ref="bg2Title">SOURCE BOOKS</p>
-            </div>
+            </v-touch>
             <div class="bg-container">
                 <div id="bg3" ref="bg3" class="bg bg-3" @mouseenter="reveal3" @mouseleave="hide3"></div>
                 <p id="bg3Title" ref="bg3Title">GALLERIES</p>
@@ -46,7 +50,7 @@
             <div class="bg-container">
                 <div id="bg9" ref="bg9" class="bg bg-9" @mouseenter="reveal9" @mouseleave="hide9"></div>
                 <p id="bg9Title" ref="bg9Title">DESIGN SERVICES</p>
-            </div>
+            </div> -->
         </div>
     </div>
 </template>
@@ -56,79 +60,116 @@
 
 
 export default {
+    data () {
+        return {
+            gridItems: [
+                'COLLECTIONS',
+                'SOURCE BOOKS',
+                'GALLERIES',
+                'RESIDENCES',
+                'GUEST HOUSES',
+                'RESTAURANTS',
+                'YATCHS',
+                'PLANES',
+                'DESIGN SERVICES'
+            ]
+        }
+    },
     methods: {
-        reveal1() {
-            this.$refs.bg1.style.opacity = 1;
-            this.$refs.bg1Title.style.opacity = 0;
-        },
-        hide1() {
-            this.$refs.bg1.style.opacity = .6;
-            this.$refs.bg1Title.style.opacity = 1;
-        },
-        reveal2() {
-            this.$refs.bg2.style.opacity = 1;
-            this.$refs.bg2Title.style.opacity = 0;
-        },
-        hide2() {
-            this.$refs.bg2.style.opacity = .6;
-            this.$refs.bg2Title.style.opacity = 1;
-        },
-        reveal3() {
-            this.$refs.bg3.style.opacity = 1;
-            this.$refs.bg3Title.style.opacity = 0;
-        },
-        hide3() {
-            this.$refs.bg3.style.opacity = .6;
-            this.$refs.bg3Title.style.opacity = 1;
-        },
-        reveal4() {
-            this.$refs.bg4.style.opacity = 1;
-            this.$refs.bg4Title.style.opacity = 0;
-        },
-        hide4() {
-            this.$refs.bg4.style.opacity = .6;
-            this.$refs.bg4Title.style.opacity = 1;
-        },
-        reveal5() {
-            this.$refs.bg5.style.opacity = 1;
-            this.$refs.bg5Title.style.opacity = 0;
-        },
-        hide5() {
-            this.$refs.bg5.style.opacity = .6;
-            this.$refs.bg5Title.style.opacity = 1;
-        },
-        reveal6() {
-            this.$refs.bg6.style.opacity = 1;
-            this.$refs.bg6Title.style.opacity = 0;
-        },
-        hide6() {
-            this.$refs.bg6.style.opacity = .6;
-            this.$refs.bg6Title.style.opacity = 1;
-        },
-        reveal7() {
-            this.$refs.bg7.style.opacity = 1;
-            this.$refs.bg7Title.style.opacity = 0;
-        },
-        hide7() {
-            this.$refs.bg7.style.opacity = .6;
-            this.$refs.bg7Title.style.opacity = 1;
-        },
-        reveal8() {
-            this.$refs.bg8.style.opacity = 1;
-            this.$refs.bg8Title.style.opacity = 0;
-        },
-        hide8() {
-            this.$refs.bg8.style.opacity = .6;
-            this.$refs.bg8Title.style.opacity = 1;
-        },
-        reveal9() {
-            this.$refs.bg9.style.opacity = 1;
-            this.$refs.bg9Title.style.opacity = 0;
-        },
-        hide9() {
-            this.$refs.bg9.style.opacity = .6;
-            this.$refs.bg9Title.style.opacity = 1;
-        },
+        reveal(i) {
+            this.$refs.bg1[0].style.opacity = .6;
+            this.$refs.bg1Title[0].style.opacity = 1;
+            this.$refs.bg2[0].style.opacity = .6;
+            this.$refs.bg2Title[0].style.opacity = 1;
+            this.$refs.bg3[0].style.opacity = .6;
+            this.$refs.bg3Title[0].style.opacity = 1;
+            this.$refs.bg4[0].style.opacity = .6;
+            this.$refs.bg4Title[0].style.opacity = 1;
+            this.$refs.bg5[0].style.opacity = .6;
+            this.$refs.bg5Title[0].style.opacity = 1;
+            this.$refs.bg6[0].style.opacity = .6;
+            this.$refs.bg6Title[0].style.opacity = 1;
+            this.$refs.bg7[0].style.opacity = .6;
+            this.$refs.bg7Title[0].style.opacity = 1;
+            this.$refs.bg8[0].style.opacity = .6;
+            this.$refs.bg8Title[0].style.opacity = 1;
+            this.$refs.bg9[0].style.opacity = .6;
+            this.$refs.bg9Title[0].style.opacity = 1;
+            this.$refs['bg'+i][0].style.opacity = 1;
+            this.$refs['bg'+i+'Title'][0].style.opacity = 0;
+        }
+        // reveal1() {
+        //     this.$refs.bg1.style.opacity = 1;
+        //     this.$refs.bg1Title.style.opacity = 0;
+        // },
+        // hide1() {
+        //     this.$refs.bg1.style.opacity = .6;
+        //     this.$refs.bg1Title.style.opacity = 1;
+        // },
+        // reveal2() {
+        //     this.$refs.bg2.style.opacity = 1;
+        //     this.$refs.bg2Title.style.opacity = 0;
+        // },
+        // hide2() {
+        //     this.$refs.bg2.style.opacity = .6;
+        //     this.$refs.bg2Title.style.opacity = 1;
+        // },
+        // reveal3() {
+        //     this.$refs.bg3.style.opacity = 1;
+        //     this.$refs.bg3Title.style.opacity = 0;
+        // },
+        // hide3() {
+        //     this.$refs.bg3.style.opacity = .6;
+        //     this.$refs.bg3Title.style.opacity = 1;
+        // },
+        // reveal4() {
+        //     this.$refs.bg4.style.opacity = 1;
+        //     this.$refs.bg4Title.style.opacity = 0;
+        // },
+        // hide4() {
+        //     this.$refs.bg4.style.opacity = .6;
+        //     this.$refs.bg4Title.style.opacity = 1;
+        // },
+        // reveal5() {
+        //     this.$refs.bg5.style.opacity = 1;
+        //     this.$refs.bg5Title.style.opacity = 0;
+        // },
+        // hide5() {
+        //     this.$refs.bg5.style.opacity = .6;
+        //     this.$refs.bg5Title.style.opacity = 1;
+        // },
+        // reveal6() {
+        //     this.$refs.bg6.style.opacity = 1;
+        //     this.$refs.bg6Title.style.opacity = 0;
+        // },
+        // hide6() {
+        //     this.$refs.bg6.style.opacity = .6;
+        //     this.$refs.bg6Title.style.opacity = 1;
+        // },
+        // reveal7() {
+        //     this.$refs.bg7.style.opacity = 1;
+        //     this.$refs.bg7Title.style.opacity = 0;
+        // },
+        // hide7() {
+        //     this.$refs.bg7.style.opacity = .6;
+        //     this.$refs.bg7Title.style.opacity = 1;
+        // },
+        // reveal8() {
+        //     this.$refs.bg8.style.opacity = 1;
+        //     this.$refs.bg8Title.style.opacity = 0;
+        // },
+        // hide8() {
+        //     this.$refs.bg8.style.opacity = .6;
+        //     this.$refs.bg8Title.style.opacity = 1;
+        // },
+        // reveal9() {
+        //     this.$refs.bg9.style.opacity = 1;
+        //     this.$refs.bg9Title.style.opacity = 0;
+        // },
+        // hide9() {
+        //     this.$refs.bg9.style.opacity = .6;
+        //     this.$refs.bg9Title.style.opacity = 1;
+        // },
     }
 
 }
