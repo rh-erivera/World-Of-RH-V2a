@@ -11,10 +11,10 @@
             </video>
         </div> 
         <div class="grid">
-            <div class="bg-container">
-                <div id="bg1" ref="bg1" class="bg bg-1" @mouseenter="reveal1" @mouseleave="hide1"></div>
+            <v-touch v-on:tap="reveal1" class="bg-container">
+                <div id="bg1" ref="bg1" class="bg bg-1"></div>
                 <p id="bg1Title" ref="bg1Title">COLLECTIONS</p>
-            </div>
+            </v-touch>
             <div class="bg-container">
                 <div id="bg2" ref="bg2" class="bg bg-2" @mouseenter="reveal2" @mouseleave="hide2"></div>
                 <p id="bg2Title" ref="bg2Title">SOURCE BOOKS</p>
