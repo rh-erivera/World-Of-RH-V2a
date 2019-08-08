@@ -57,9 +57,9 @@ export default {
         }
     },
     mounted() {
-        this.startInterval1 = setInterval(this.startPlaceSlideShow, 4000)
-        this.startInterval2 = setInterval(this.startProductSlideShow, 5000)
-        this.startInterval3 = setInterval(this.startSpaceSlideShow, 6000)
+        this.startInterval1 = setInterval(this.startPlaceSlideShow, 3000)
+        this.startInterval2 = setInterval(this.startProductSlideShow, 4000)
+        this.startInterval3 = setInterval(this.startSpaceSlideShow, 5000)
         // this.interval = setInterval(this.slideshow, 4000)
     },
     methods: {
