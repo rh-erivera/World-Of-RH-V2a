@@ -63,72 +63,72 @@ export default {
         this.interval = setInterval(this.slideshow, 4000)
     },
     methods: {
-        startPlaceSlideShow() {
-            clearInterval(this.startInterval1)
-            this.$refs['places'+this.i1].style.color = 'black';
-            this.$refs['places'+(this.i1-1)].style.color = '#999';
-            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
-            this.interval1 = setInterval(this.placeSlideShow, 4000)
-        },
-        placeSlideShow() {
-            if (this.i1 == 1) {
-                this.$refs['places'+this.i1].style.color = 'black';
-                this.$refs['places'+'4'].style.color = '#999';
-            } else {
-                this.$refs['places'+this.i1].style.color = 'black';
-                this.$refs['places'+(this.i1-1)].style.color = '#999';
-            }
-            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
-            if (this.i1 == 4) {
-                this.i1 = 1
-            } else {
-                this.i1++
-            }
-        },
-        startProductSlideShow() {
-            clearInterval(this.startInterval2)
-            this.$refs['prod'+this.i2].style.color = 'black';
-            this.$refs['prod'+(this.i2-1)].style.color = '#999';
-            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
-            this.interval2 = setInterval(this.prodSlideShow, 4000) 
-        },
-        prodSlideShow() {
-            if (this.i2 == 1) {
-                this.$refs['prod'+this.i2].style.color = 'black';
-                this.$refs['prod'+'4'].style.color = '#999';
-            } else {
-                this.$refs['prod'+this.i2].style.color = 'black';
-                this.$refs['prod'+(this.i2-1)].style.color = '#999';
-            }
-            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
-            if (this.i2 == 4) {
-                this.i2 = 1
-            } else {
-                this.i2++
-            }
-        },
-        startSpaceSlideShow() {
-            clearInterval(this.startInterval3)
-            this.$refs['spaces'+this.i3].style.color = 'black';
-            this.$refs['spaces'+(this.i3-1)].style.color = '#999';
-            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
-            this.interval3 = setInterval(this.spaceSlideShow, 4000) 
-        },
-        spaceSlideShow() {
-            if (this.i3 == 1) {
-                this.$refs['spaces'+this.i3].style.color = 'black';
-                this.$refs['spaces'+'4'].style.color = '#999';
-            } else {
-                this.$refs['spaces'+this.i3].style.color = 'black';
-                this.$refs['spaces'+(this.i3-1)].style.color = '#999';
-            }
-            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
-            if (this.i3 == 4) {
-                this.i3 = 1
-            } else {
-                this.i3++
-            }
-        },
+        // startPlaceSlideShow() {
+        //     clearInterval(this.startInterval1)
+        //     this.$refs['places'+this.i1].style.color = 'black';
+        //     this.$refs['places'+(this.i1-1)].style.color = '#999';
+        //     this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
+        //     this.interval1 = setInterval(this.placeSlideShow, 4000)
+        // },
+        // placeSlideShow() {
+        //     if (this.i1 == 1) {
+        //         this.$refs['places'+this.i1].style.color = 'black';
+        //         this.$refs['places'+'4'].style.color = '#999';
+        //     } else {
+        //         this.$refs['places'+this.i1].style.color = 'black';
+        //         this.$refs['places'+(this.i1-1)].style.color = '#999';
+        //     }
+        //     this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
+        //     if (this.i1 == 4) {
+        //         this.i1 = 1
+        //     } else {
+        //         this.i1++
+        //     }
+        // },
+        // startProductSlideShow() {
+        //     clearInterval(this.startInterval2)
+        //     this.$refs['prod'+this.i2].style.color = 'black';
+        //     this.$refs['prod'+(this.i2-1)].style.color = '#999';
+        //     this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
+        //     this.interval2 = setInterval(this.prodSlideShow, 4000) 
+        // },
+        // prodSlideShow() {
+        //     if (this.i2 == 1) {
+        //         this.$refs['prod'+this.i2].style.color = 'black';
+        //         this.$refs['prod'+'4'].style.color = '#999';
+        //     } else {
+        //         this.$refs['prod'+this.i2].style.color = 'black';
+        //         this.$refs['prod'+(this.i2-1)].style.color = '#999';
+        //     }
+        //     this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
+        //     if (this.i2 == 4) {
+        //         this.i2 = 1
+        //     } else {
+        //         this.i2++
+        //     }
+        // },
+        // startSpaceSlideShow() {
+        //     clearInterval(this.startInterval3)
+        //     this.$refs['spaces'+this.i3].style.color = 'black';
+        //     this.$refs['spaces'+(this.i3-1)].style.color = '#999';
+        //     this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
+        //     this.interval3 = setInterval(this.spaceSlideShow, 4000) 
+        // },
+        // spaceSlideShow() {
+        //     if (this.i3 == 1) {
+        //         this.$refs['spaces'+this.i3].style.color = 'black';
+        //         this.$refs['spaces'+'4'].style.color = '#999';
+        //     } else {
+        //         this.$refs['spaces'+this.i3].style.color = 'black';
+        //         this.$refs['spaces'+(this.i3-1)].style.color = '#999';
+        //     }
+        //     this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
+        //     if (this.i3 == 4) {
+        //         this.i3 = 1
+        //     } else {
+        //         this.i3++
+        //     }
+        // },
         slideshow() {
             if (this.i == 1) {
                 this.$refs['prod'+this.i].style.color = 'black';
