@@ -84,7 +84,7 @@ export default {
 
 <style>
 .container {
-    height: 730px;
+    height: 732px;
     display: flex;
     background-color: black;
     color: white;
