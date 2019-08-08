@@ -196,7 +196,7 @@ export default {
 
 <style>
 .container {
-    height: 732px;
+    /* height: 732px; */
     animation: fadeIn 1s ease-in;
     padding: 0px 3.5%;
 }
@@ -233,7 +233,7 @@ export default {
 
 .slideshow {
     display: flex;
-    height: 470.8px;
+    height: 465.8px;
 }
 
 .col-1, .col-2, .col-3 {
@@ -277,7 +277,7 @@ export default {
     /* text-align: center; */
     display: flex;
     align-items: center;
-    height: 151.4px;
+    height: 156.4px;
 }
 
 .menu-1, .menu-2, .menu-3 {
