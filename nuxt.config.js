@@ -13,15 +13,18 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preload', href: '/design11/11_bg_01.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_02.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_03.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_04.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_05.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_06.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_07.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_08.jpg', as: 'image'},
-      { rel: 'preload', href: '/design11/11_bg_09.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_places_01.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_places_02.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_places_03.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_places_04.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_products_01.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_products_02.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_products_03.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_products_04.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_spaces_01.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_spaces_02.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_spaces_03.jpg', as: 'image'},
+      { rel: 'preload', href: '/design15/col1/15_bg_spaces_04.jpg', as: 'image'}
     ]
   },
   /*

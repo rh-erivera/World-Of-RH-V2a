@@ -149,9 +149,9 @@ export default {
                 this.$refs['spaces'+this.i].style.color = 'black';
                 this.$refs['spaces'+(this.i-1)].style.color = '#999';
             }
-            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
-            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
-            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            this.$refs.col1.style.backgroundImage = 'url(\'/design15/col1/15_bg_places_0'+this.i+'.jpg\')';
+            this.$refs.col2.style.backgroundImage = 'url(\'/design15/col2/15_bg_products_0'+this.i+'.jpg\')';
+            this.$refs.col3.style.backgroundImage = 'url(\'/design15/col3/15_bg_spaces_0'+this.i+'.jpg\')';
             if (this.i == 4) {
                 this.i = 1
             } else {
@@ -197,7 +197,7 @@ export default {
 <style>
 .container {
     /* height: 732px; */
-    animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-out;
     padding: 0px 3.5%;
 }
 
@@ -240,7 +240,7 @@ export default {
     width: 33.33vw;
     background-size: cover;
     background-position: center;
-    transition: all 1000ms ease-in;
+    transition: all 1s ease-in;
 }
 
 .col-2, .menu-2 {
@@ -294,7 +294,7 @@ export default {
     font-size: 7.5pt;
     line-height: 7.5pt;
     letter-spacing: .07em;
-    transition: all 400ms ease-in;
+    transition: all 400ms ease-out;
 }
 
 .spacer {
@@ -302,17 +302,17 @@ export default {
 }
 
 .col-1 {
-    background-image: url('/design15/15_bg_places_01.jpg');
+    background-image: url('/design15/col1/15_bg_places_01.jpg');
     /* background-position: left; */
 }
 
 .col-2 {
-    background-image: url('/design15/15_bg_products_01.jpg');
+    background-image: url('/design15/col2/15_bg_products_01.jpg');
     /* background-position: center; */
 }
 
 .col-3 {
-    background-image: url('/design15/15_bg_spaces_01.jpg');
+    background-image: url('/design15/col3/15_bg_spaces_01.jpg');
     /* background-position: right; */
 }
 
