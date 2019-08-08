@@ -33,7 +33,7 @@
                 <p class="link" id="spaces1" ref="spaces1" style="color: black"><a href="" id="spaces1" ref="spaces1">ARCHITECTURE</a></p>
                 <p class="link" id="spaces2" ref="spaces2"><a href="">INTERIOR DESIGN</a></p>
                 <p class="link" id="spaces3" ref="spaces3"><a href="">LANDSCAPE ARCHITECTURE</a></p>
-                <p class="link" id="spaces4" ref="spaces4"><a href="">PLANE & YATCH DESIGN & CHARTER</a></p>
+                <p class="link" id="spaces4" ref="spaces4"><a href="">PLANE<span class="spacer">/</span>YATCH DESIGN & CHARTER</a></p>
             </div>
         </div>
     </div>
@@ -51,13 +51,16 @@ export default {
             startInterval2: null,
             interval2: null,
             startInterval3: null,
-            interval3: null
+            interval3: null,
+            i: 2,
+            interval: null
         }
     },
     mounted() {
-        this.startInterval1 = setInterval(this.startPlaceSlideShow, 4000)
-        this.startInterval2 = setInterval(this.startProductSlideShow, 5000)
-        this.startInterval3 = setInterval(this.startSpaceSlideShow, 6000)
+        // this.startInterval1 = setInterval(this.startPlaceSlideShow, 4000)
+        // this.startInterval2 = setInterval(this.startProductSlideShow, 5000)
+        // this.startInterval3 = setInterval(this.startSpaceSlideShow, 6000)
+        this.interval = setInterval(this.slideshow, 4000)
     },
     methods: {
         startPlaceSlideShow() {
@@ -124,6 +127,35 @@ export default {
                 this.i3 = 1
             } else {
                 this.i3++
+            }
+        },
+        slideshow() {
+            if (this.i == 1) {
+                this.$refs['prod'+this.i].style.color = 'black';
+                this.$refs['prod'+'4'].style.color = '#999';
+
+                this.$refs['places'+this.i].style.color = 'black';
+                this.$refs['places'+'4'].style.color = '#999';
+
+                this.$refs['spaces'+this.i].style.color = 'black';
+                this.$refs['spaces'+'4'].style.color = '#999';
+            } else {
+                this.$refs['prod'+this.i].style.color = 'black';
+                this.$refs['prod'+(this.i-1)].style.color = '#999';
+
+                this.$refs['places'+this.i].style.color = 'black';
+                this.$refs['places'+(this.i-1)].style.color = '#999';
+            
+                this.$refs['spaces'+this.i].style.color = 'black';
+                this.$refs['spaces'+(this.i-1)].style.color = '#999';
+            }
+            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            if (this.i == 4) {
+                this.i = 1
+            } else {
+                this.i++
             }
         }
             // if (this.j == 1) {
@@ -201,13 +233,14 @@ export default {
 
 .slideshow {
     display: flex;
-    height: 475.8px;
+    height: 470.8px;
 }
 
 .col-1, .col-2, .col-3 {
     width: 33.33vw;
     background-size: cover;
-    transition: all 750ms ease-in;
+    background-position: center;
+    transition: all 1000ms ease-in;
 }
 
 .col-2, .menu-2 {
@@ -244,7 +277,7 @@ export default {
     /* text-align: center; */
     display: flex;
     align-items: center;
-    height: 146.4px;
+    height: 151.4px;
 }
 
 .menu-1, .menu-2, .menu-3 {
@@ -269,18 +302,18 @@ export default {
 }
 
 .col-1 {
-    background-image: url('/design10/10_bg_01.jpg');
-    background-position: left;
+    background-image: url('/design15/15_bg_places_01.jpg');
+    /* background-position: left; */
 }
 
 .col-2 {
-    background-image: url('/design10/10_bg_02.jpg');
-    background-position: center;
+    background-image: url('/design15/15_bg_products_01.jpg');
+    /* background-position: center; */
 }
 
 .col-3 {
-    background-image: url('/design10/10_bg_03.jpg');
-    background-position: right;
+    background-image: url('/design15/15_bg_spaces_01.jpg');
+    /* background-position: right; */
 }
 
 @keyframes fadeIn {
