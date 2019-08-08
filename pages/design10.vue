@@ -84,12 +84,11 @@ export default {
 
 <style>
 .container {
-    height: 100vh;
+    height: 768px;
     display: flex;
     background-color: black;
     color: white;
     animation: fadeIn 1s ease-in;
-    overflow: hidden;
 }
 
 .logo {

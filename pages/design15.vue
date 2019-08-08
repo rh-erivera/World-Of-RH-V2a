@@ -30,10 +30,10 @@
             <div class="menu-3">
                 <p class="the">The</p>
                 <p class="titles">SPACES <span class="and">&</span><span class="services"> SERVICES</span></p>
-                <a href="" id="spaces1" ref="spaces1">PLANES</a><br>
-                <a href="" id="spaces2" ref="spaces2">YACHTS</a><br>
+                <a href="" id="spaces1" ref="spaces1">ARCHITECTURE</a><br>
                 <a href="" id="spaces3" ref="spaces3">INTERIOR DESIGN</a><br>
-                <a href="">ARCHITECTURE<span class="spacer">/</span></a><a href="">LANDSCAPE DESIGN</a><br>
+                <a href="" id="spaces2" ref="spaces2">LANDSCAPE ARCHITECTURE</a><br>
+                <a href="">PLANE & YATCH DESIGN & CHARTER</a>
             </div>
         </div>
     </div>
