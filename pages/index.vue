@@ -7,7 +7,8 @@
       <a href="/design12">Design 12</a>
       <a href="/design13">Design 13</a>
       <a href="/design14">Design 14</a>
-      <a href="/design15">Design 15</a>
+      <a href="/design15a">Design 15a</a>
+      <a href="/design15b">Design 15b</a>
     </div>
   </div>
 </template>
