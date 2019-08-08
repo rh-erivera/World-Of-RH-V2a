@@ -12,7 +12,16 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preload', href: '/design11/11_bg_01.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_02.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_03.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_04.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_05.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_06.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_07.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_08.jpg', as: 'image'},
+      { rel: 'preload', href: '/design11/11_bg_09.jpg', as: 'image'},
     ]
   },
   /*
