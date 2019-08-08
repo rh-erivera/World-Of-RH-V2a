@@ -43,49 +43,121 @@
 export default {
     data() {
         return {
-            i: 2,
-            j: 2,
-            interval: null
+            i1: 2,
+            i2: 2,
+            i3: 2,
+            startInterval1: null,
+            interval1: null,
+            startInterval2: null,
+            interval2: null,
+            startInterval3: null,
+            interval3: null
         }
     },
     mounted() {
-        this.interval = setInterval(this.slideshow, 4000)
+        this.startInterval1 = setInterval(this.startPlaceSlideShow, 4000)
+        this.startInterval2 = setInterval(this.startProductSlideShow, 5000)
+        this.startInterval3 = setInterval(this.startSpaceSlideShow, 6000)
     },
     methods: {
-        slideshow() {
-            if (this.j == 1) {
-                this.$refs['prod'+this.j].style.color = 'black';
-                this.$refs['prod'+'4'].style.color = '#999';
-
-                this.$refs['places'+this.j].style.color = 'black';
+        startPlaceSlideShow() {
+            clearInterval(this.startInterval1)
+            this.$refs['places'+this.i1].style.color = 'black';
+            this.$refs['places'+(this.i1-1)].style.color = '#999';
+            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
+            this.interval1 = setInterval(this.placeSlideShow, 4000)
+        },
+        placeSlideShow() {
+            if (this.i1 == 1) {
+                this.$refs['places'+this.i1].style.color = 'black';
                 this.$refs['places'+'4'].style.color = '#999';
-
-                this.$refs['spaces'+this.j].style.color = 'black';
+            } else {
+                this.$refs['places'+this.i1].style.color = 'black';
+                this.$refs['places'+(this.i1-1)].style.color = '#999';
+            }
+            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i1+'.jpg\')';
+            if (this.i1 == 4) {
+                this.i1 = 1
+            } else {
+                this.i1++
+            }
+        },
+        startProductSlideShow() {
+            clearInterval(this.startInterval2)
+            this.$refs['prod'+this.i2].style.color = 'black';
+            this.$refs['prod'+(this.i2-1)].style.color = '#999';
+            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
+            this.interval2 = setInterval(this.prodSlideShow, 4000) 
+        },
+        prodSlideShow() {
+            if (this.i2 == 1) {
+                this.$refs['prod'+this.i2].style.color = 'black';
+                this.$refs['prod'+'4'].style.color = '#999';
+            } else {
+                this.$refs['prod'+this.i2].style.color = 'black';
+                this.$refs['prod'+(this.i2-1)].style.color = '#999';
+            }
+            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i2+'.jpg\')';
+            if (this.i2 == 4) {
+                this.i2 = 1
+            } else {
+                this.i2++
+            }
+        },
+        startSpaceSlideShow() {
+            clearInterval(this.startInterval3)
+            this.$refs['spaces'+this.i3].style.color = 'black';
+            this.$refs['spaces'+(this.i3-1)].style.color = '#999';
+            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
+            this.interval3 = setInterval(this.spaceSlideShow, 4000) 
+        },
+        spaceSlideShow() {
+            if (this.i3 == 1) {
+                this.$refs['spaces'+this.i3].style.color = 'black';
                 this.$refs['spaces'+'4'].style.color = '#999';
             } else {
-                this.$refs['prod'+this.j].style.color = 'black';
-                this.$refs['prod'+(this.j-1)].style.color = '#999';
-
-                this.$refs['places'+this.j].style.color = 'black';
-                this.$refs['places'+(this.j-1)].style.color = '#999';
-            
-                this.$refs['spaces'+this.j].style.color = 'black';
-                this.$refs['spaces'+(this.j-1)].style.color = '#999';
+                this.$refs['spaces'+this.i3].style.color = 'black';
+                this.$refs['spaces'+(this.i3-1)].style.color = '#999';
             }
-            this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
-            this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
-            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
-            if (this.j == 4) {
-                this.j = 1
+            this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i3+'.jpg\')';
+            if (this.i3 == 4) {
+                this.i3 = 1
             } else {
-                this.j++
-            }
-            if (this.i == 9) {
-                this.i = 1
-            } else {
-                this.i++
+                this.i3++
             }
         }
+            // if (this.j == 1) {
+            //     this.$refs['prod'+this.j].style.color = 'black';
+            //     this.$refs['prod'+'4'].style.color = '#999';
+
+            //     this.$refs['places'+this.j].style.color = 'black';
+            //     this.$refs['places'+'4'].style.color = '#999';
+
+            //     this.$refs['spaces'+this.j].style.color = 'black';
+            //     this.$refs['spaces'+'4'].style.color = '#999';
+            // } else {
+            //     this.$refs['prod'+this.j].style.color = 'black';
+            //     this.$refs['prod'+(this.j-1)].style.color = '#999';
+
+            //     this.$refs['places'+this.j].style.color = 'black';
+            //     this.$refs['places'+(this.j-1)].style.color = '#999';
+            
+            //     this.$refs['spaces'+this.j].style.color = 'black';
+            //     this.$refs['spaces'+(this.j-1)].style.color = '#999';
+            // }
+            // this.$refs.col1.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            // this.$refs.col2.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            // this.$refs.col3.style.backgroundImage = 'url(\'/design11/11_bg_0'+this.i+'.jpg\')';
+            // if (this.j == 4) {
+            //     this.j = 1
+            // } else {
+            //     this.j++
+            // }
+            // if (this.i == 9) {
+            //     this.i = 1
+            // } else {
+            //     this.i++
+            // }
     }
 }
 </script>
@@ -98,7 +170,7 @@ export default {
 }
 
 .nav {
-    height: 15vh;
+    height: 109.8px;
     display: flex;
     justify-content: center;
 }
@@ -129,7 +201,7 @@ export default {
 
 .slideshow {
     display: flex;
-    height: 65vh;
+    height: 475.8px;
 }
 
 .col-1, .col-2, .col-3 {
@@ -172,7 +244,7 @@ export default {
     /* text-align: center; */
     display: flex;
     align-items: center;
-    height: 20vh;
+    height: 146.4px;
 }
 
 .menu-1, .menu-2, .menu-3 {
