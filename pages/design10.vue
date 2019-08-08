@@ -89,6 +89,7 @@ export default {
     background-color: black;
     color: white;
     animation: fadeIn 1s ease-in;
+    overflow: hidden;
 }
 
 .logo {
